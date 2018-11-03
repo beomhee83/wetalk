@@ -1,0 +1,20 @@
+{
+  "name": "wetalk",
+  "version": "1.0.0",
+  "description": "Hello we-talk",
+  "main": "index.js",
+  "author": "beom hee",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . --out=wetalk --asar --overwite --all --ignore=wetalk",
+    "build:darwin": "electron-packager . --out=wetalk --asar --overwite --platform=darwin --arch=x64 --ignore=wetalk",
+    "compress":"cd wetalk; for file in `ls`; do zip -r -y $file.zip $file; done"
+  },
+  "dependencies": {
+    "electron": "^3.0.7"
+  },
+  "devDependencies": {
+    "electron-packager": "^12.2.0"
+  }
+}
